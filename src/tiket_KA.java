@@ -10,9 +10,21 @@ final class tiket_KA {
     public tiket_KA(){
         System.out.println("PEMESANAN TIKET KERETA API ");
         System.out.println("---------------------------");
-        class datakereta {
+        class Datatakereta extends Kereta{
+            private int kapasitas_gerb;
+            public Datatakereta(int kapasitas_gerb){
+                this.kapasitas_gerb = kapasitas_gerb;
+            }
+
+            @Override
+            int getArea() {
+                return 0;
+            }
+
             static void myMethod(String nka, String noka) {
                 System.out.println(nka + "  " + noka);
+                Datatakereta KA =new Datatakereta(105);
+                System.out.println("Kapasitas Gerbong : " + KA.getArea());
             }
 
             public static void main(String[] args) {
